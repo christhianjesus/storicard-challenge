@@ -54,6 +54,10 @@ func csvRecordToTransaction(record []string) (*summarize.Transaction, error) {
 		return nil, errors.New("Invalid 'date' field")
 	}
 
+	if len(record[2]) == 0 {
+		return nil, errors.New("Invalid 'transaction' field")
+	}
+
 	var transactionType summarize.TransactionType
 	switch symbol := record[2][:1]; symbol {
 	case "+":
