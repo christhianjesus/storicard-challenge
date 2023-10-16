@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 70%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        thead th {
+            background-color: #00F5EB;
+        }
+
+        .first-child {
+            background-color: #A9FF95;
+        }
+
+        tfoot td {
+            font-weight: bold;
+            background-color: #FF8CD9;
+        }
+
+        tbody td + td, tfoot td + td {
+            text-align: right;
+        }
+
+        .message {
+            font-family: arial, sans-serif;
+            color: #088F8F;
+            font-size: 22px;
+        }
+
+        .margin-top-m {
+            margin-top: 30px;
+        }
+        </style>
+    </head>
+    <body>
+
+        <div class="margin-top-m">
+            <img src="https://storicard-challenge.s3.amazonaws.com/complete-logo.0f6b7ce5.png"/>
+        </div>
+
+        <div class="margin-top-m">
+            <span class="message">Account Summary</span>
+        </div>
+
+        <table class="margin-top-m">
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th># of transactions</th>
+                    <th>Average debit</th>
+                    <th>Average credit</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{range .SummaryPerMonth}}
+                <tr>
+                    <td class="first-child">{{.MonthName}}</td>
+                    <td>{{.TransactionsQTY}}</td>
+                    <td>{{.AVGDebit}}</td>
+                    <td>-{{.AVGCredit}}</td>
+                </tr>
+                {{end}}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total Balance</td>
+                    <td colspan="3">{{.TotalBalance}}</td>
+                </tr>
+            </tfoot>
+        </table>
+
+    </body>
+</html>
