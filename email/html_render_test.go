@@ -7,20 +7,20 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-func TestFileNotFound_GenerateTransactionSummary(t *testing.T) {
-	_, err := GenerateTransactionSummary("", nil)
+func TestFileNotFound_GenerateTransactionEmail(t *testing.T) {
+	_, err := GenerateTransactionEmail("", nil)
 
 	require.Error(t, err)
 }
 
-func TestParseError_GenerateTransactionSummary(t *testing.T) {
-	_, err := GenerateTransactionSummary("template.html", nil)
+func TestParseError_GenerateTransactionEmail(t *testing.T) {
+	_, err := GenerateTransactionEmail("template.html", nil)
 
 	require.Error(t, err)
 }
 
-func TestGenerateTransactionSummary(t *testing.T) {
-	_, err := GenerateTransactionSummary("template.html", &summarize.Summary{})
+func TestGenerateTransactionEmail(t *testing.T) {
+	_, err := GenerateTransactionEmail("template.html", &summarize.Summary{})
 
 	require.NoError(t, err)
 }

@@ -14,7 +14,7 @@ type Summary struct {
 	SummaryPerMonth []*MonthSummary
 }
 
-func Summarize(transactionList TransactionList) Summary {
+func Summarize(transactionList TransactionList) *Summary {
 	transactionsPerMonth := transactionList.GroupByMonth()
 
 	summaryPerMonth := make([]*MonthSummary, 0, len(transactionsPerMonth))
@@ -30,7 +30,7 @@ func Summarize(transactionList TransactionList) Summary {
 		}
 	}
 
-	return Summary{
+	return &Summary{
 		TotalBalance:    transactionList.TotalBalance(),
 		SummaryPerMonth: summaryPerMonth,
 	}

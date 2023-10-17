@@ -68,7 +68,7 @@ func csvRecordToTransaction(record []string) (*summarize.Transaction, error) {
 		return nil, errors.New("Invalid 'transaction' field")
 	}
 
-	amount, err := strconv.ParseFloat(record[2][1:], 64)
+	amount, err := strconv.ParseFloat(record[2], 64)
 	if err != nil {
 		return nil, errors.New("Invalid 'transaction' field")
 	}

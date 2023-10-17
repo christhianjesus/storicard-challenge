@@ -7,7 +7,7 @@ import (
 	"github.com/christhianjesus/storicard-challenge/summarize"
 )
 
-func GenerateTransactionSummary(tmplName string, summary *summarize.Summary) (string, error) {
+func GenerateTransactionEmail(tmplName string, summary *summarize.Summary) (string, error) {
 	tmpl, err := template.ParseFiles(tmplName)
 	if err != nil {
 		return "", err
