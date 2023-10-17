@@ -1,0 +1,12 @@
+version: "3.9"
+   
+services:
+  lambda:
+    build: .
+    env_file: .env
+    environment:
+      CSV_FILE_NAME: long_example.csv
+      TEMPLATE_NAME: template.html
+      EMAIL_SUBJECT: Transaction History
+      EMAIL_FROM: storicard00000@gmail.com
+      EMAIL_TO: christhianjesus@gmail.com

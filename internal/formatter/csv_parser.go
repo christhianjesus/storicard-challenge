@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/christhianjesus/storicard-challenge/summarize"
+	"github.com/christhianjesus/storicard-challenge/internal/summarize"
 )
 
 func GetTransactionsFromCSV(file io.Reader) (summarize.TransactionList, error) {
