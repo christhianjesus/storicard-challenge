@@ -2,7 +2,7 @@ package formatter
 
 import (
 	"bytes"
-	"text/template"
+	"html/template"
 
 	"github.com/christhianjesus/storicard-challenge/internal/summarize"
 )
