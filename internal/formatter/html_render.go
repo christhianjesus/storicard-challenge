@@ -1,10 +1,10 @@
-package email
+package formatter
 
 import (
 	"bytes"
 	"text/template"
 
-	"github.com/christhianjesus/storicard-challenge/summarize"
+	"github.com/christhianjesus/storicard-challenge/internal/summarize"
 )
 
 func GenerateTransactionEmail(tmplName string, summary *summarize.Summary) (string, error) {

@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/christhianjesus/storicard-challenge/summarize"
+	"github.com/christhianjesus/storicard-challenge/internal/summarize"
 	"github.com/stretchr/testify/require"
 )
 
