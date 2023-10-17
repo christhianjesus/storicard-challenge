@@ -5,7 +5,7 @@ services:
     build: .
     env_file: .env
     environment:
-      CSV_FILE_NAME: example.csv
+      CSV_FILE_NAME: long-example.csv
       TEMPLATE_NAME: template.html
       EMAIL_SUBJECT: Transaction History
       EMAIL_FROM: storicard00000@gmail.com

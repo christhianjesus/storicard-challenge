@@ -65,15 +65,15 @@
                 <tr>
                     <td class="first-child">{{.MonthName}}</td>
                     <td>{{.TransactionsQTY}}</td>
-                    <td>{{.AVGDebit}}</td>
-                    <td>{{.AVGCredit}}</td>
+                    <td>{{printf "%.2f" .AVGDebit}}</td>
+                    <td>{{printf "%.2f" .AVGCredit}}</td>
                 </tr>
                 {{end}}
             </tbody>
             <tfoot>
                 <tr>
                     <td>Total Balance</td>
-                    <td colspan="3">{{.TotalBalance}}</td>
+                    <td colspan="3">{{printf "%.2f" .TotalBalance}}</td>
                 </tr>
             </tfoot>
         </table>
